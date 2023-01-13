@@ -1,0 +1,13 @@
+site_name: My Docs
+
+theme:
+  name: material
+
+plugins:
+  - tags:
+      tags_file: tags.md
+  - i18n:
+      default_language: en
+      languages:
+        en: English
+        ja: 日本語
