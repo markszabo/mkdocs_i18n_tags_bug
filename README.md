@@ -1,0 +1,1 @@
+# mkdocs_i18n_tags_bug
