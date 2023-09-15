@@ -2,3 +2,19 @@ site_name: My Other Docs Site
 use_directory_urls: false
 nav:
   - Home: index.md
+
+plugins:
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      languages:
+        - build: true
+          default: true
+          locale: en
+          name: English
+        - build: true
+          default: false
+          locale: ja
+          name: 日本語
+      reconfigure_material: true
+      reconfigure_search: true
