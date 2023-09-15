@@ -3,11 +3,26 @@ site_name: My Docs
 theme:
   name: material
 
+nav:
+  - My docs site:
+      - Overview: index.md
+  - My other docs site: "!include ./other-site/mkdocs.yml"
+
 plugins:
+  - monorepo
   - tags:
       tags_file: tags.md
   - i18n:
-      default_language: en
+      docs_structure: suffix
+      fallback_to_default: true
       languages:
-        en: English
-        ja: 日本語
+        - build: true
+          default: true
+          locale: en
+          name: English
+        - build: true
+          default: false
+          locale: ja
+          name: 日本語
+      reconfigure_material: true
+      reconfigure_search: true
